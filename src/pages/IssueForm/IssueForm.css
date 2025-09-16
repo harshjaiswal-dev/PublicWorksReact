@@ -1,0 +1,126 @@
+/* Container */
+.issue-form-container {
+  max-width: 600px;
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.issue-form-container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form Layout */
+.issue-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.form-group select,
+.form-group textarea,
+.form-group input,
+.form-group div {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* TextArea */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.cancel-btn {
+  background-color: #888;
+}
+
+.submit-btn {
+  background-color: #007bff;
+}
+
+/* Mobile & Tablet Responsive */
+@media (min-width: 500px) {
+  .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-group label {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  .form-group select,
+  .form-group textarea,
+  .form-group input,
+  .form-group div {
+    width: 70%;
+  }
+
+  .form-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .form-buttons button {
+    width: auto;
+    margin-left: 10px;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .issue-form-container {
+    padding: 30px;
+  }
+
+  .issue-form-container h2 {
+    font-size: 2rem;
+  }
+
+  .form-group select,
+  .form-group textarea,
+  .form-group input,
+  .form-group div {
+    padding: 10px;
+  }
+}
