@@ -39,6 +39,12 @@ const Login: React.FC = () => {
     }
   };
 
+const handleGoogleLoginRedirect = () => {
+  // This URL should match your backend AuthController's /login endpoint
+  window.location.href = "http://localhost:1210/auth/login";
+};
+
+
   const handleGoogleLogin = async (credentialResponse: CredentialResponse) => {
     if (!credentialResponse.credential) return;
 
@@ -46,7 +52,7 @@ const Login: React.FC = () => {
 
     try {
       const res = await googleLogin(credentialResponse.credential);
-
+//storing jwt token ,role and user
       if (res && res.token) {
         localStorage.setItem("token", res.token);
         localStorage.setItem("role", selectedRole);
@@ -127,6 +133,12 @@ const Login: React.FC = () => {
         onError={() => alert("Google Login Failed")}
         useOneTap
       />
+      {/* <button
+  style={styles.loginButton}
+  onClick={handleGoogleLoginRedirect}
+>
+  Login with Google
+</button> */}
     </div>
   );
 };
