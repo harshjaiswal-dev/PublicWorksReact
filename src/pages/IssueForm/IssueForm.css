@@ -1,126 +1,100 @@
 /* Container */
-.issue-form-container {
-  max-width: 600px;
-  width: 95%;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  background-color: #fff;
-}
-
-.issue-form-container h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-/* Form Layout */
-.issue-form {
+.location-picker-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
 }
 
-/* Form Groups */
-.form-group {
-  display: flex;
-  flex-direction: column;
+.location-picker-container:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-/* Inputs */
-.form-group select,
-.form-group textarea,
-.form-group input,
-.form-group div {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-/* TextArea */
-textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
-/* Buttons */
-.form-buttons {
+/* Radio buttons layout */
+.radio-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.cancel-btn,
-.submit-btn {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  color: #fff;
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
   cursor: pointer;
-  width: 100%;
+  transition: color 0.2s ease;
 }
 
-.cancel-btn {
-  background-color: #888;
+.radio-group input[type="radio"] {
+  accent-color: #007bff; /* modern blue color for radio */
 }
 
-.submit-btn {
-  background-color: #007bff;
+.radio-group label:hover {
+  color: #007bff;
 }
 
-/* Mobile & Tablet Responsive */
-@media (min-width: 500px) {
-  .form-group {
+/* GPS coordinates display */
+.coords-display {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.coords-display span {
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Manual inputs */
+.manual-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.manual-inputs input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manual-inputs input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 600px) {
+  .radio-group {
     flex-direction: row;
-    align-items: center;
+    gap: 20px;
   }
 
-  .form-group label {
-    width: 30%;
-    margin-bottom: 0;
-  }
-
-  .form-group select,
-  .form-group textarea,
-  .form-group input,
-  .form-group div {
-    width: 70%;
-  }
-
-  .form-buttons {
+  .coords-display {
     flex-direction: row;
-    justify-content: flex-end;
+    gap: 20px;
   }
 
-  .form-buttons button {
-    width: auto;
-    margin-left: 10px;
-  }
-}
-
-/* Larger screens */
-@media (min-width: 768px) {
-  .issue-form-container {
-    padding: 30px;
+  .manual-inputs {
+    flex-direction: row;
   }
 
-  .issue-form-container h2 {
-    font-size: 2rem;
-  }
-
-  .form-group select,
-  .form-group textarea,
-  .form-group input,
-  .form-group div {
-    padding: 10px;
+  .manual-inputs input {
+    flex: 1;
   }
 }
