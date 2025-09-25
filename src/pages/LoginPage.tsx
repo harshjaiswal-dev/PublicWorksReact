@@ -41,7 +41,7 @@ const Login: React.FC = () => {
 
 const handleGoogleLoginRedirect = () => {
   // This URL should match your backend AuthController's /login endpoint
-  window.location.href = "http://localhost:1210/auth/login";
+  window.location.href = "http://localhost:5000/auth/google";
 };
 
 
@@ -131,7 +131,7 @@ const handleGoogleLoginRedirect = () => {
       <GoogleLogin
         onSuccess={handleGoogleLogin}
         onError={() => alert("Google Login Failed")}
-        useOneTap
+         useOneTap
       />
       {/* <button
   style={styles.loginButton}
